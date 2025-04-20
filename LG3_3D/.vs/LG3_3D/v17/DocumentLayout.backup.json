@@ -1,0 +1,166 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\LG3_3D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|c:\\users\\pc\\lg3_3d\\assets\\_game\\scripts\\statemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\statemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|c:\\users\\pc\\lg3_3d\\assets\\_game\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG3_3D\\assets\\_game\\scripts\\pollingweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\pollingweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG3_3D\\assets\\_game\\scripts\\boomerang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\boomerang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG3_3D\\assets\\_game\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG3_3D\\assets\\_game\\scripts\\poolingenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\poolingenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG3_3D\\assets\\_game\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG3_3D\\assets\\_game\\scripts\\hammer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\hammer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG3_3D\\assets\\_game\\scripts\\knife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDAB256E-2A78-E5E4-2DB0-CFEBD760C8F1}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\knife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StateMachine.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\StateMachine.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\StateMachine.cs",
+              "ToolTip": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\StateMachine.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\StateMachine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T13:36:04.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\Enemy.cs",
+              "ToolTip": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Enemy.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T08:47:08.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PoolingEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\PoolingEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\PoolingEnemy.cs",
+              "ToolTip": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\PoolingEnemy.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\PoolingEnemy.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T08:49:58.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PollingWeapon.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\PollingWeapon.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\PollingWeapon.cs",
+              "ToolTip": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\PollingWeapon.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\PollingWeapon.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T09:19:07.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Weapon.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Weapon.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\Weapon.cs",
+              "ToolTip": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Weapon.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\Weapon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T21:01:14.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Boomerang.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Boomerang.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\Boomerang.cs",
+              "ToolTip": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Boomerang.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\Boomerang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:10:06.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Hammer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Hammer.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\Hammer.cs",
+              "ToolTip": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Hammer.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\Hammer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:09:56.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Knife.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Knife.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\Knife.cs",
+              "ToolTip": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Knife.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\Knife.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:09:42.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Character.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\Character.cs",
+              "ToolTip": "C:\\Users\\PC\\LG3_3D\\Assets\\_Game\\Scripts\\Character.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\Character.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwDMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T13:43:58.839Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

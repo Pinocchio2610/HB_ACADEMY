@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\LG2_3D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|c:\\users\\pc\\lg2_3d\\assets\\statemachine\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|solutionrelative:assets\\statemachine\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG2_3D\\assets\\_game\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG2_3D\\assets\\_game\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|C:\\Users\\PC\\LG2_3D\\assets\\_game\\scripts\\mapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\mapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|c:\\users\\pc\\lg2_3d\\assets\\_game\\scripts\\navmesagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4A86CA-2EB9-45A3-9CEA-4E477ADC254E}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\scripts\\navmesagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG2_3D\\Assets\\StateMachine\\Character.cs",
+              "RelativeDocumentMoniker": "Assets\\StateMachine\\Character.cs",
+              "ToolTip": "C:\\Users\\PC\\LG2_3D\\Assets\\StateMachine\\Character.cs",
+              "RelativeToolTip": "Assets\\StateMachine\\Character.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T08:17:25.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NavmesAgen.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG2_3D\\Assets\\_Game\\Scripts\\NavmesAgen.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\NavmesAgen.cs",
+              "ToolTip": "C:\\Users\\PC\\LG2_3D\\Assets\\_Game\\Scripts\\NavmesAgen.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\NavmesAgen.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T04:59:08.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG2_3D\\Assets\\_Game\\Scripts\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\CameraFollow.cs",
+              "ToolTip": "C:\\Users\\PC\\LG2_3D\\Assets\\_Game\\Scripts\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\CameraFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T05:50:41.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG2_3D\\Assets\\_Game\\Scripts\\Character.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\Character.cs",
+              "ToolTip": "C:\\Users\\PC\\LG2_3D\\Assets\\_Game\\Scripts\\Character.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\Character.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T20:15:10.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mapmanager.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\LG2_3D\\Assets\\_Game\\Scripts\\Mapmanager.cs",
+              "RelativeDocumentMoniker": "Assets\\_Game\\Scripts\\Mapmanager.cs",
+              "ToolTip": "C:\\Users\\PC\\LG2_3D\\Assets\\_Game\\Scripts\\Mapmanager.cs",
+              "RelativeToolTip": "Assets\\_Game\\Scripts\\Mapmanager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T17:30:57.974Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
