@@ -3,22 +3,7 @@ guid: ad9c5e925231c264786ddc838013d4de
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - TextAsset: {instanceID: 0}
-  - BoxStartDo: {instanceID: 0}
-  - BoxStartXanhDuong: {instanceID: 0}
-  - BoxStartVang: {instanceID: 0}
-  - BoxStarXanhLa: {instanceID: 0}
-  - BoxEndVang: {instanceID: 0}
-  - BoxEndXanhLa: {instanceID: 0}
-  - BoxEndXanhBien: {instanceID: 0}
-  - BoxEndDo: {instanceID: 0}
-  - BoxMove: {fileID: 299383401581936402, guid: ea381c8aaf6d6cd4f99b7e4eaf712ba7, type: 3}
-  - BoxSpoonXanhLa: {instanceID: 0}
-  - BoxSpoonDo: {instanceID: 0}
-  - BoxSpoonVang: {instanceID: 0}
-  - BoxSpoonXanhBien: {instanceID: 0}
-  - BoxWall: {fileID: 3230062345942085453, guid: 1bde3f69a51499345a35397780b4ef16, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

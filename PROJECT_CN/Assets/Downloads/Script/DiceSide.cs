@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class DiceSide : MonoBehaviour
 {
+    public static DiceSide diceSide;
     bool onGround;
     public int sideValue;
-
-    void OnTriggerStay(Collider col)
+    private void Awake()
     {
+        diceSide = this;
+    }
+    void OnTriggerEnter(Collider col)
+    {
+       
         if (col.tag == "Ground")
         {
             onGround = true;

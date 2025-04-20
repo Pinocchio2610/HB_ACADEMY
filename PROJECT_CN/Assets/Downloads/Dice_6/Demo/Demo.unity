@@ -924,7 +924,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceValue: 0
-  diceSides: []
+  diceSides:
+  - {fileID: 1532795740}
+  - {fileID: 356079143}
+  - {fileID: 403358763}
+  - {fileID: 53998368}
+  - {fileID: 763098353}
+  - {fileID: 1542486124}
 --- !u!1 &1519298100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1202,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

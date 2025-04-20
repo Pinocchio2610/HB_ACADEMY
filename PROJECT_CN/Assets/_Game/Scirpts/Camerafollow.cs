@@ -9,13 +9,11 @@ public class Camerafollow : MonoBehaviour
     public Vector3 offset;
     public Transform TF;
     //public Transform TFmapmanager;
-
     // Update is called once per frame
     void LateUpdate()
     {
-        TF.position = new Vector3(8, 50, 8);
+        TF.position = new Vector3(8, 40, 8);
         TF.rotation = Quaternion.Euler(90 , 0  , 0);   
-       
     }
    
 }

@@ -5,17 +5,21 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpoonSeahoure
-  - SeahorsePlayer
   - Ground
+  - SeahorsePlayer
   - mana
+  - CPU1
+  - CPUBLUE1
+  - CPUGREEN
+  - CPUYELLOW
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Dice
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 

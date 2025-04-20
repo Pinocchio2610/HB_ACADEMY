@@ -4,172 +4,210 @@ using System.Runtime.CompilerServices;
 using DG.Tweening;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class GameManager : MonoBehaviour
 {
-    private Dictionary<int, Vector3> move = Mapmanager.CheckInt();
-    private int Xucxac = 6;
-    private Vector3[] LocalCanguaDo = new Vector3[4] { new Vector3(11, 1, 2), new Vector3(11, 1, 5), new Vector3(14, 1, 2), new Vector3(14, 1, 5) };
-    private Animator anim;
-    private string currrenanim;
-    private NavMeshAgent agent;
-    private Vector3 targetPosition;
-    private float speed = 0.2f;
-    private float t = 0;
-    GameObject a;
-    private bool succect;
+    public static GameManager instance;
+    public int currentPlayer = 0;  // Người chơi hiện tại
+    public int totalPlayers = 4;   // Tổng số người chơi
+    private bool isCPUTurnProcessing = false;
+    public List<GameObject> gameList = new List<GameObject>();
+    public Button Pause;
+    public GameObject CanvasSetting;
+    public bool isStop;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-
+        if (instance == null) instance = this;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        Mana();
-        CheckSeahouse();
-
-
-
+        Pause.onClick.AddListener(OnCanvasSetting);
+       
     }
-    void CheckSeahouse()
+    private void Update()
     {
-        RaycastHit hit;
-        if (Input.GetMouseButtonUp(0)) // Kiểm tra khi nhấn chuột trái
+        if (isStop)
         {
-
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100f)) // Raycast từ camera xuống
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 3f;
+        }
+        NextTurn();
+    }
+        
+    public void NextTurn()
+    {
+        if (currentPlayer == 0)
+        {
+            Player.Instance.StartTurn(currentPlayer);
+            gameList[0].GetComponent<Image>().color = Color.white;
+        }
+        else if (currentPlayer == 1) // CPU
+        {
+            gameList[1].GetComponent<Image>().color = Color.white;
+            if (!isCPUTurnProcessing)
             {
-                if (hit.collider.CompareTag("SeahorsePlayer")) // Kiểm tra có phải cá ngựa không
-                {
-                    for (int i = 0; i < LocalCanguaDo.Length; i++)
-                    {
-
-                        if (hit.collider.transform.position == LocalCanguaDo[i])
-                        {
-                            if (Xucxac == 6)
-                            {
-                                hit.collider.transform.position = move[1];
-                                return;
-                            }
-                        }
-                    }
-                    for (int i = 0; i < move.Count; i++)
-                    {
-                        if (hit.transform.position == move[i])
-                        {
-                            if (Xucxac == 6)
-                            {
-                                hit.transform.DOMove(move[i + 1], 1f);
-                                Xucxac--;
-                                if (Xucxac == 5)
-                                {
-                                    hit.transform.DOMove(move[i + 2], 1f);
-                                    Xucxac--;
-                                    if (Xucxac == 4)
-                                    {
-                                        hit.transform.DOMove(move[i + 3], 1f);
-                                        Xucxac--;
-
-                                        if (Xucxac == 3)
-                                        {
-                                            hit.transform.DOMove(move[i + 4], 1f);
-                                            Xucxac--;
-                                            if (Xucxac == 2)
-                                            {
-                                                hit.transform.DOMove(move[i + 5], 1f);
-                                                Xucxac--;
-                                                if (Xucxac == 1)
-                                                {
-                                                    hit.transform.DOMove(move[i + 6], 1f);
-                                                    Xucxac--;
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                }
-                               
-                            }
-                            Xucxac = 6;
-                            //if (Xucxac == 5)
-                            //{
-                            //    hit.transform.DOMove(move[i + 1], 1f);
-                            //    hit.transform.DOMove(move[i + 2], 1f);
-                            //    hit.transform.DOMove(move[i + 3], 1f);
-                            //    hit.transform.DOMove(move[i + 4], 1f);
-                            //    hit.transform.DOMove(move[i + 5], 1f);
-                            //}
-                            //if (Xucxac == 4)
-                            //{
-                            //    hit.transform.DOMove(move[i + 1], 1f);
-                            //    hit.transform.DOMove(move[i + 1], 1f);
-                            //    hit.transform.DOMove(move[i + 1], 1f);
-                            //    hit.transform.DOMove(move[i + 1], 1f);
-                            //}
-                            //if (Xucxac == 3)
-                            //{
-                            //    hit.transform.DOMove(move[i + 1], 1f);
-                            //    hit.transform.DOMove(move[i + 1], 1f);
-                            //    transform.DOMove(move[i + 1], 1f);
-                            //}
-                            //if (Xucxac == 2)
-                            //{
-                            //    transform.DOMove(move[i + 1], 1f);
-                            //    transform.DOMove(move[i + 1], 1f);
-                            //}
-                            //if (Xucxac == 1)
-                            //{
-                            //    transform.DOMove(move[i + 1], 1f);
-                            //}
-                        }
-                    }
-                }
-
+                StartCoroutine(HandleCPUTurn());
             }
-
         }
-
-    }
-    void Mana()
-    {
-
-        GameObject poolingmana = PoolingMana.Instance.SetActivity();
-
-        if (poolingmana != null)
+        else if (currentPlayer == 2)
         {
-            int A = Random.Range(1, 56);
-            poolingmana.transform.position = move[A] - new Vector3(0, 0.5f, 0);
-            poolingmana.transform.rotation = Quaternion.identity;
-            poolingmana.SetActive(true);
+            gameList[2].GetComponent<Image>().color = Color.white;
+            if (!isCPUTurnProcessing)
+            {
+                StartCoroutine(HandleCPU1Turn());
+            }
         }
-    }
-
-    void ChangeAnim(string currename)
-    {
-        if (currrenanim != currename)
+        else if (currentPlayer == 3)
         {
-            currename = currrenanim;
-            anim.ResetTrigger(currrenanim);
-            anim.SetTrigger(currename);
+            gameList[3].GetComponent<Image>().color = Color.white;
+            if (!isCPUTurnProcessing)
+            {
+                StartCoroutine(HandleCPU2Turn());
+            }
         }
     }
-    float SetTime()
+    public void EndTurn()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            t += Time.deltaTime * speed;
-        }
-        return t;
+        currentPlayer = (currentPlayer + 1) % totalPlayers;
+        NextTurn();
     }
+    private IEnumerator HandleCPUTurn()
+    {
+        isCPUTurnProcessing = true;
 
+        // 1. Hiệu ứng bắt đầu lượt
+        yield return new WaitForSeconds(0.5f); // Delay để người chơi thấy
 
+        // 2. Tung xúc xắc
+        Dice.dice.RollDiceCPU();
+        // 3. Chờ xúc xắc dừng
+        yield return new WaitUntil(() =>
+            Dice.dice.gameObject.GetComponent<Rigidbody>().velocity == Vector3.zero);
+
+        yield return new WaitForSeconds(10f); // Thêm delay để quan sát
+
+        // 4. Hiển thị kết quả
+        Dice.dice.Canvas.SetActive(false);
+        int result = Dice.dice.CallRoll();
+        CPU.instance.Xucxac = result;
+        // 5. Di chuyển từng bước (nếu cần)
+        if (Dice.dice.CheckMoveCPU == true)
+        {
+            CPU.instance.CheckSeahouse();
+        }
+        yield return new WaitForSeconds(0.5f); // Delay giữa các bước di chuyển
+        // 6. Kết thúc lượt
+        yield return new WaitForSeconds(0.5f);
+        if (CPU.instance.Xucxac == 6)
+        {
+            Dice.dice.Reset();
+            StartCoroutine(HandleCPUTurn());
+        }
+        else
+        {
+            isCPUTurnProcessing = false;
+            gameList[1].GetComponent<Image>().color = Color.black;
+            Dice.dice.Reset();
+            EndTurn();
+        }
+    }
+    private IEnumerator HandleCPU1Turn()
+    {
+        isCPUTurnProcessing = true;
+
+        // 1. Hiệu ứng bắt đầu lượt
+        yield return new WaitForSeconds(0.5f); // Delay để người chơi thấy
+
+        // 2. Tung xúc xắc
+        Dice.dice.RollDiceCPU2();
+        // 3. Chờ xúc xắc dừng
+        yield return new WaitUntil(() =>
+            Dice.dice.gameObject.GetComponent<Rigidbody>().velocity == Vector3.zero);
+
+        yield return new WaitForSeconds(10f); // Thêm delay để quan sát
+        // 4. Hiển thị kết quả
+        Dice.dice.Canvas.SetActive(false);
+        int result = Dice.dice.CallRoll();
+        CPU2.instance.Xucxac = result;
+        // 5. Di chuyển từng bước (nếu cần)
+        if (Dice.dice.CheckMoveCPU2 == true)
+        {
+            CPU2.instance.CheckSeahouse();
+        }
+        yield return new WaitForSeconds(0.5f); // Delay giữa các bước di chuyển
+        // 6. Kết thúc lượt
+        yield return new WaitForSeconds(0.5f);
+        if (CPU2.instance.Xucxac == 6)
+        {
+            Dice.dice.Reset();
+            StartCoroutine(HandleCPU1Turn());
+        }
+        else
+        {
+            gameList[2].GetComponent<Image>().color = Color.black;
+            Dice.dice.Reset();
+            isCPUTurnProcessing = false;
+            EndTurn();
+        }
+    }
+    private IEnumerator HandleCPU2Turn()
+    {
+        isCPUTurnProcessing = true;
+
+        // 1. Hiệu ứng bắt đầu lượt
+        yield return new WaitForSeconds(0.5f); // Delay để người chơi thấy
+
+        // 2. Tung xúc xắc
+        Dice.dice.RollDiceCPU3();
+        // 3. Chờ xúc xắc dừng
+        yield return new WaitUntil(() =>
+            Dice.dice.gameObject.GetComponent<Rigidbody>().velocity == Vector3.zero);
+
+        yield return new WaitForSeconds(10f); // Thêm delay để quan sát
+
+        // 4. Hiển thị kết quả
+        Dice.dice.Canvas.SetActive(false);
+        int result = Dice.dice.CallRoll();
+        CPU3.instance.Xucxac = result;
+        // 5. Di chuyển từng bước (nếu cần)
+        if (Dice.dice.CheckMoveCPU3 == true)
+        {
+            CPU3.instance.CheckSeahouse();
+        }
+        yield return new WaitForSeconds(0.5f); // Delay giữa các bước di chuyển
+        // 6. Kết thúc lượt
+        yield return new WaitForSeconds(0.5f);
+        if (CPU3.instance.Xucxac == 6)
+        {
+            Dice.dice.Reset();
+            StartCoroutine(HandleCPU2Turn());
+        }
+        else
+        {
+            isCPUTurnProcessing = false;
+            gameList[3].GetComponent<Image>().color = Color.black;
+            Dice.dice.Reset();
+            EndTurn();
+        }
+    }
+    private void OnCanvasSetting()
+    {
+        CanvasSetting.SetActive(true);
+        isStop = true;  
+    }
 }
+
 
 
 

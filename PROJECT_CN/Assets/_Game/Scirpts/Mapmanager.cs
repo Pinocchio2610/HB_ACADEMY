@@ -34,14 +34,13 @@ public class Mapmanager : MonoBehaviour
     public List<GameObject> hourse = new List<GameObject>();
     private List<GameObject> listhouse = new List<GameObject>();
     private static Dictionary<int, Vector3> keyValuePairs = new Dictionary<int, Vector3>();
-    private Vector3 trongluc = Vector3.up;
-   
-
-
+    private Vector3 trongluc = new Vector3(0, 1.01f, 0);
+    private static List<GameObject> CanguaGreen = new List<GameObject>();
+    private static List<GameObject> CanguaYellow = new List<GameObject>();
+    private Dictionary<int, Vector3> move;
     //Transform[] childObject;
     //public List<Transform> childNodeList = new List<Transform>();
-
-    public static Mapmanager mapmanager { get; private set; }
+    public static Mapmanager mapmanager;
     private void Awake()
     {
         if (mapmanager == null)
@@ -52,32 +51,36 @@ public class Mapmanager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        //Genmap();
+        //CloneHourse();
+        //move = Mapmanager.CheckInt();
+
     }
-    // Start is called before the first frame update
-    void Start()
+  
+    private void Start()
     {
         Genmap();
         CloneHourse();
-
+        move = Mapmanager.CheckInt();
     }
-
+    private void Update()
+    {
+        Mana();
+    }
     public void Genmap()
     {
         string maptext = TextAsset.text;
         string[] textSpilit = maptext.Split("\r\n");
-
         int row = textSpilit.Length;
         int col = textSpilit[0].Split("-").Length;
         for (int i = 0; i < row; i++)
         {
             string data = textSpilit[i];
             string[] Split = data.Split("-");
-
             for (int j = 0; j < col; j++)
             {
                 int number = int.Parse(Split[j]);
                 Vector3 pos = new Vector3(i, 0, j);
-
                 if (number == 0)
                 {
                     Instantiate(Fence, pos, Quaternion.identity, this.transform);
@@ -97,9 +100,6 @@ public class Mapmanager : MonoBehaviour
                 {
                     Instantiate(BoxStartDo, pos, Quaternion.identity, this.transform);
                     keyValuePairs[1] = pos + trongluc;
-
-
-
                 }
                 else if (number == 14)
                 {
@@ -137,7 +137,7 @@ public class Mapmanager : MonoBehaviour
                 {
                     Instantiate(BoxSpoonVang, pos, Quaternion.identity, this.transform);
                     locationYellow.Add(pos);
-                    
+
                 }
                 else if (number == 43)
                 {
@@ -226,7 +226,6 @@ public class Mapmanager : MonoBehaviour
                 {
                     Instantiate(BoxMove, pos, Quaternion.identity, this.transform);
                     keyValuePairs[3] = pos + trongluc;
-
                 }
                 else if (number == 65)
                 {
@@ -237,7 +236,6 @@ public class Mapmanager : MonoBehaviour
                 {
                     Instantiate(BoxMove, pos, Quaternion.identity, this.transform);
                     keyValuePairs[5] = pos + trongluc;
-
                 }
                 else if (number == 67)
                 {
@@ -249,38 +247,31 @@ public class Mapmanager : MonoBehaviour
                     Instantiate(BoxMove, pos, Quaternion.identity, this.transform);
                     keyValuePairs[7] = pos + trongluc;
 
-
                 }
                 else if (number == 69)
                 {
                     Instantiate(BoxMove, pos, Quaternion.identity, this.transform);
                     keyValuePairs[8] = pos + trongluc;
-
-
                 }
                 else if (number == 70)
                 {
                     Instantiate(BoxMove, pos, Quaternion.identity, this.transform);
                     keyValuePairs[9] = pos + trongluc;
-
                 }
                 else if (number == 71)
                 {
                     Instantiate(BoxMove, pos, Quaternion.identity, this.transform);
                     keyValuePairs[10] = pos + trongluc;
-
                 }
                 else if (number == 72)
                 {
                     Instantiate(BoxMove, pos, Quaternion.identity, this.transform);
                     keyValuePairs[11] = pos + trongluc;
-
                 }
                 else if (number == 73)
                 {
                     Instantiate(BoxMove, pos, Quaternion.identity, this.transform);
                     keyValuePairs[12] = pos + trongluc;
-
                 }
 
                 else if (number == 74)
@@ -519,7 +510,6 @@ public class Mapmanager : MonoBehaviour
                 else if (number == 344)
                 {
                     Instantiate(BoxStartXanhDuong, pos, Quaternion.identity, this.transform);
-
                     keyValuePairs[78] = pos + trongluc;
                 }
                 else if (number == 345)
@@ -530,7 +520,6 @@ public class Mapmanager : MonoBehaviour
                 else if (number == 346)
                 {
                     Instantiate(BoxStartXanhDuong, pos, Quaternion.identity, this.transform);
-
                     keyValuePairs[80] = pos + trongluc;
                 }
 
@@ -542,18 +531,13 @@ public class Mapmanager : MonoBehaviour
                 {
                     Instantiate(Background, pos, Quaternion.identity, this.transform);
                 }
-
             }
         }
-
-        for(int i = 0; i < 1; i++)
+        for (int i = 0; i < 1; i++)
         {
-            Instantiate(Image , new Vector3(8 , -0.1f, 8) , Quaternion.identity, this.transform);
+            Instantiate(Image, new Vector3(8, -0.1f, 8), Quaternion.identity, this.transform);
         }
-
     }
-
-
     private void CloneHourse()
     {
         int soluong = 4 * 4 / hourse.Count;
@@ -562,38 +546,49 @@ public class Mapmanager : MonoBehaviour
             for (int j = 0; j < soluong; j++)
             {
                 listhouse.Add(hourse[i]);
-
             }
         }
-
         for (int i = 0; i < 4; ++i)
         {
             GameObject a = Instantiate(listhouse[3 - i], locationRed[i] + Vector3.up, Quaternion.identity, this.transform);
-
         }
         for (int i = 0; i < 4; ++i)
         {
             GameObject a = Instantiate(listhouse[7 - i], locationGreen[i] + Vector3.up, Quaternion.Euler(0, 180, 0), this.transform);
-
-
         }
         for (int i = 0; i < 4; i++)
         {
-            GameObject a = Instantiate(listhouse[11 - i], locationBlue[i] + Vector3.up, Quaternion.Euler(0, -90, 0), this.transform);
+           Instantiate(listhouse[11 - i], locationBlue[i] + Vector3.up, Quaternion.Euler(0, -90, 0), this.transform);
         }
-
         for (int i = 0; i < 4; i++)
         {
             GameObject a = Instantiate(listhouse[15 - i], locationYellow[i] + Vector3.up, Quaternion.identity, this.transform);
-
+            CanguaYellow.Add(a);
         }
-
-
     }
- 
+    void Mana()
+    {
+        GameObject poolingmana = PoolingMana.Instance.SetActivity();
+
+        if (poolingmana != null)
+        {
+            int A = Random.Range(1, 56);
+            poolingmana.transform.position = move[A] - new Vector3(0, 0.5f, 0);
+            poolingmana.transform.rotation = Quaternion.identity;
+            poolingmana.SetActive(true);
+        }
+    }
     public static Dictionary<int, Vector3> CheckInt()
     {
         return keyValuePairs;
+    }
+    public static List<GameObject> CallGreen()
+    {
+        return CanguaGreen;
+    }
+    public static List<GameObject> CallYellow()
+    {
+        return CanguaYellow;
     }
 }
     

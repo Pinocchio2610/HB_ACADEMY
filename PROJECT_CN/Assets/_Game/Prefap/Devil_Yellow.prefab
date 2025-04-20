@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 4568459182007122466}
   - component: {fileID: 8875499659615027945}
   - component: {fileID: 8319684914268481535}
+  - component: {fileID: -4944091510755531656}
+  - component: {fileID: -7531633134460795393}
   m_Layer: 0
   m_Name: Devil_Yellow
-  m_TagString: Untagged
+  m_TagString: CPUYELLOW
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8711960350720982225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.744033, y: -14.66, z: -6.91}
+  m_LocalPosition: {x: 4.744033, y: -5.992513, z: -6.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -95,10 +97,45 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-4944091510755531656
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711960350720982225}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &-7531633134460795393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711960350720982225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715c756210616cf4fa4d1be932a5d5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lever: 0
+  Xucxac: 0
+  isMoving: 0
+  isOutside: 0
+  Myhome: {x: 0, y: 0, z: 0}
+  anim: {fileID: 2256271213007382549}
+  Firtmove: {x: 0, y: 0, z: 0}
 --- !u!1001 &8199630080609743487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -156,6 +193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fead9023d4e2bc0439235c0d286d865e, type: 3}
+--- !u!95 &2256271213007382549 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7963792044615752298, guid: fead9023d4e2bc0439235c0d286d865e, type: 3}
+  m_PrefabInstance: {fileID: 8199630080609743487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5463287306208293875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4187097262245790092, guid: fead9023d4e2bc0439235c0d286d865e, type: 3}
