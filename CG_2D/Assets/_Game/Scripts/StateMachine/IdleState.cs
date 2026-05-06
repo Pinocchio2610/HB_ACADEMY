@@ -8,7 +8,6 @@ public class IdleState : IState
     float randomTime;
     public void OnEnter(Enemy enemy)
     {
-        
         enemy.StopMoving();
         timer = 0;
         randomTime = Random.Range(2.5f, 4f);
@@ -17,7 +16,6 @@ public class IdleState : IState
 
     public void OnExecute(Enemy enemy)
     {
-        
         timer += Time.deltaTime;
 
         if (timer > randomTime)

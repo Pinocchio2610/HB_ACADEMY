@@ -26,11 +26,10 @@ public class Player : Character
     void Start()
     {
         SavePoint();
-        
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (isDead)
         {
@@ -168,7 +167,7 @@ public class Player : Character
    
     internal void SavePoint()
     {
-        savePoint = transform.position;
+        savePoint = this.transform.position;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

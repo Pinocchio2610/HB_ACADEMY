@@ -11,11 +11,10 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-       
+        Debug.Log(IsDead);
     }
     private void Start()
     {
-       
         OnInit();
     }
     public virtual void OnInit()

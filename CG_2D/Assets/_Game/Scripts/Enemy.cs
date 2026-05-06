@@ -11,6 +11,10 @@ public class Enemy : Character
     [SerializeField] private Rigidbody2D rb;
     private IState currentState;
     private bool isRight = true;
+
+    private Character target;
+    public Character Taget => target;
+
     void Update()
     {
 
@@ -58,21 +62,43 @@ public class Enemy : Character
     }
     public void Attack()
     {
-
+        ChangeAnim("attack");
     }
     public bool IsTargetInRange()
     {
-        return false;
+        if (target != null && Vector2.Distance(target.transform.position, this.transform.position) <= attackRange)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void SetTaget(Character character)
+    {
+        this.target = character;
+        if (IsTargetInRange())
+        {
+            ChangeState(new AttackState());
+        }
+        else if (target != null)
+        {
+            ChangeState(new PatrolState());
+        }
+        else
+        {
+            ChangeState(new IdleState());
+        }
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("EnemyWall"))
         {
             ChangeDirection(!isRight);
-            Debug.Log("OnTriggerEnter2DEnemyWall");
         }
     }
-    private void ChangeDirection(bool isRight)
+    public void ChangeDirection(bool isRight)
     {
         this.isRight = isRight;
         transform.rotation = isRight ? Quaternion.Euler(Vector3.zero) : Quaternion.Euler(Vector3.up * 180);

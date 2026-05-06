@@ -25,10 +25,7 @@ public class Character : MonoBehaviour
     //public Material mas;
 
     // Start is called before the first frame update
-    private void Start()
-    {
 
-    }
 
 
     // Update is called once per frame
@@ -49,7 +46,7 @@ public class Character : MonoBehaviour
         transform.Translate(direction * Time.deltaTime * Speed);
         Player = transform.position;
         cau = direction;
-        
+
         if (CheckBox())
         {
             return;
@@ -70,7 +67,7 @@ public class Character : MonoBehaviour
     }
     // nen de mot scrip brick
 
-    
+
 
 
     private void Cau()
@@ -81,7 +78,7 @@ public class Character : MonoBehaviour
             Vector3 check = new Vector3(Player.x, Player.y - 1, Player.z);
             Debug.DrawRay(check, Vector3.forward, Color.red, 5f);
             RaycastHit hit;
-            if (Physics.Raycast(check, Vector3.forward, out hit, 5 ))
+            if (Physics.Raycast(check, Vector3.forward, out hit, 5))
             {
 
                 if (cau.z < 0)
@@ -89,7 +86,7 @@ public class Character : MonoBehaviour
                     string tag = hit.collider.tag;
                     if (tag.Contains("MyBrick"))
                     {
-                        if (hit.collider.gameObject.GetComponent<MeshRenderer>().sharedMaterial !=mas)
+                        if (hit.collider.gameObject.GetComponent<MeshRenderer>().sharedMaterial != mas)
                         {
                             Transform D = transform.GetChild(transform.childCount - 1);
                             D.transform.SetParent(transform, false);

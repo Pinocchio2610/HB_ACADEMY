@@ -15,13 +15,29 @@ public class PatrolState : IState
     public void OnExecute(Enemy enemy)
     {
         timer += Time.deltaTime;
-        if (timer < randomTime)
+
+        if (enemy.Taget != null)
         {
-            enemy.Moving();
+            enemy.ChangeDirection(enemy.Taget.transform.position.x > enemy.transform.position.x);
+            if (enemy.IsTargetInRange())
+            {
+                enemy.ChangeState(new AttackState());
+            }
+            else
+            {
+                enemy.Moving();
+            }
         }
         else
         {
-            enemy.ChangeState(new IdleState());
+            if (timer < randomTime)
+            {
+                enemy.Moving();
+            }
+            else
+            {
+                enemy.ChangeState(new IdleState());
+            }
         }
     }
 
@@ -29,7 +45,4 @@ public class PatrolState : IState
     {
 
     }
-
-    
-   
 }
